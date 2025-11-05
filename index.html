@@ -8,35 +8,135 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <script src="api.js" defer></script>
 </head>
 
 <body>
-    <main>
-        <div class="main-container">
-            <div class="box" style="grid-area: box-1;">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <h1>My Portfolio</h1>
+            </a>
+        </div>
+        <div class="nav-btns">
+            <div class="text-change">
+                <span>ENG | TR</span>
+            </div>
+            <div class="mode-change">
+                <i class="fa-solid fa-sun show"></i>
+                <i class="fa-solid fa-moon hide"></i>
+            </div>
+        </div>
+    </nav>
+    <section class="main">
+        <div class="hello">
             <div class="profile-img">
-                <img src="" alt="">
+                <img src="images/pro2.jpg" alt="">
             </div>
             <div class="text">
                 <h2>Name Surname</h2>
-                <h3>Fullstack Web Developer</h3>
+                <h3>Software Designer | Cloud Engineer</h3>
             </div>
-            </div>
-            <div class="box" style="grid-area: box-2;"></div>
-            <div class="box" style="grid-area: box-3;"></div>
-            <div class="box" style="grid-area: box-4;"></div>
-            <div class="box" style="grid-area: box-5;"></div>
-            <div class="box" style="grid-area: box-6;"></div>
-            <div class="box" style="grid-area: box-7;"></div>
-            <div class="box" style="grid-area: box-8;"></div>
-            <div class="box" style="grid-area: box-9;"></div>
-            <div class="box" style="grid-area: box-10;"></div>
-            <div class="box" style="grid-area: box-11;"></div>
-            <div class="box" style="grid-area: box-12;"></div>
         </div>
-    </main>
+    </section>
+    <section class="about-me">
+        <h2>- ABOUT ME -</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis porro natus perspiciatis sit necessitatibus
+            voluptatibus ut eos fugiat eaque vitae, reiciendis quaerat doloremque quam explicabo soluta eum quas ullam
+            quibusdam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio iste nam, ipsam praesentium
+            quaerat excepturi in dicta nulla temporibus doloribus suscipit distinctio vel repellat, molestiae
+            repudiandae consequuntur, doloremque labore quis. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Incidunt, dignissimos similique quis quod nam ut excepturi sint sit corporis in doloribus voluptates dicta
+            modi. Officia enim voluptatibus eligendi ipsam dolore. Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Nostrum sapiente quis totam? Culpa reiciendis ab, debitis adipisci quisquam sunt totam neque, tempore,
+            et tenetur odio eius. Suscipit architecto eveniet ratione. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aliquam temporibus, vero assumenda vel enim delectus adipisci vitae voluptatum dolore.
+            Quasi quis expedita esse est necessitatibus sunt nam quo quae optio! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Labore dolorum explicabo iusto et officiis, illo, ex repudiandae, eligendi aspernatur
+            ipsum voluptate quaerat molestiae voluptatum velit? Officia assumenda soluta rerum at?</p>
+        <button>Download My CV</button>
+    </section>
+    <section class="projects">
+        <h2>- MY PROJECTS -</h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1661290256778-3b821d52c514?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=3000"
+                            alt="">
+                    </div>
+                    <div class="swiper-text">
+                        <h3>Project 1</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1661290256778-3b821d52c514?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=3000"
+                            alt="">
+                    </div>
+                    <div class="swiper-text">
+                        <h3>Project 2</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1661290256778-3b821d52c514?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=3000"
+                            alt="">
+                    </div>
+                    <div class="swiper-text">
+                        <h3>Project 3</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1661290256778-3b821d52c514?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=3000"
+                            alt="">
+                    </div>
+                    <div class="swiper-text">
+                        <h3>Project 4</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1661290256778-3b821d52c514?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=3000"
+                            alt="">
+                    </div>
+                    <div class="swiper-text">
+                        <h3>Project 5</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1661290256778-3b821d52c514?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=3000"
+                            alt="">
+                    </div>
+                    <div class="swiper-text">
+                        <h3>Project 6</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1661290256778-3b821d52c514?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=3000"
+                            alt="">
+                    </div>
+                    <div class="swiper-text">
+                        <h3>Project 7</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </body>
 
 </html>

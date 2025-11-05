@@ -1,55 +1,252 @@
 @import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-html{
+html {
     font-family: "Elms Sans", sans-serif;
-    color: var(--Navy200);
+    color: var(--clr-bg-page);
+    background-color: var(--clr-bg-page);
 }
 
+/* Ana CSS Dosyanızın en üstüne ekleyin */
 :root {
-    --Purple600: hsl(246, 80%, 60%);
-    --social: hsl(264, 64%, 52%);
-    --Navy950: rgb(15, 20, 36);
-    --Navy900: rgb(28, 31, 74,0.5);
-    --Purple500: hsl(235, 45%, 61%);
-    --Navy200: hsl(236, 100%, 87%);
+    /* Ana Vurgu Renkleri */
+    --clr-primary-hero: #2B2A4A;
+    /* Koyu Lacivert/Mor (Kahraman Alanı) */
+    --clr-primary-about-card: #414064;
+    /* Orta Koyu Lacivert/Mor (Hakkımda Kartı) */
+
+    /* Zemin Renkleri */
+    --clr-bg-page: #F0F2F5;
+    /* Çok Açık Gri (Tüm sayfa zemini) */
+    --clr-bg-card: #FFFFFF;
+    /* Saf Beyaz (Varsayılan kartlar) */
+
+    /* Metin Renkleri */
+    --clr-text-light: #FFFFFF;
+    /* Beyaz (Koyu zeminler için) */
+    --clr-text-dark: #1A1B2E;
+    /* Çok Koyu Lacivert (Açık zeminler için) */
+    --clr-text-secondary: #6B7280;
+    /* Orta Gri (Açıklamalar, ikonlar) */
 }
 
-body{
+body {
     min-height: 100vh;
     background-color: var(--Navy950);
-    margin: 5em 5em;
 }
 
 
-.main-container{
-    border: 10px solid rgba(255, 255, 255, 0.2);
+/*NAVBAR*/
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-color: var(--clr-text-dark);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px solid var(--clr-text-light);
+}
+
+/*NAVBAR BTNS*/
+.nav-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+.nav-btns .text-change {
+    background: var(--clr-primary-hero);
+    padding: 0.5em 0.5em;
     border-radius: 20px;
-    padding: 2em 2em;
-    background-color: var(--Navy900);
-    display: grid;
-    grid-template-columns: auto-fit minmax(250px,1fr);
-    grid-template-rows: auto;
-    grid-template-areas: 
-    'box-1 box-1 box-2 box-2'
-    'box-3 box-4 box-5 box-5'
-    'box-3 box-4 box-5 box-5'
-    'box-3 box-4 box-6 box-6'
-    'box-7 box-7 box-8 box-8'
-    'box-9 box-10 box-11 box-12'
-    'box-9 box-10 box-11 box-12';
-    gap: 1em;
+    cursor: pointer;
 }
 
-.box{
-    min-width: 250px;
-    min-height: 250px;
-    border: 2px solid red;
+.nav-btns .mode-change {
+    background: var(--clr-primary-hero);
+    padding: 0.5em 0.5em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.mode-change:hover,
+.text-change:hover {
+    background: var(--clr-primary-about-card);
+    transition: 0.3s ease-in-out;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+
+/*NAVBAR LOGO*/
+
+.logo a {
+    text-decoration: none;
+    color: var(--clr-bg-card);
+    font-weight: 800;
+}
+
+/*MAİN SECTİON*/
+
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--clr-text-dark);
+    min-height: 50vh;
+}
+
+
+.main .hello {
+    color: var(--clr-bg-card);
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.main .profile-img img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+/*About me section*/
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+    background-color: var(--clr-bg-page);
+    color: var(--clr-text-dark);
+    margin-inline: 15em;
+    gap: 3em;
+    border-bottom: 2px solid var(--clr-primary-hero);
+}
+
+.about-me h2 {
+    font-size: 2rem;
+    font-weight: 800 bold;
+}
+
+.about-me button {
+    padding: 0.5em;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.about-me button:hover {
+    box-shadow: 0 0 20px solid rgba(0, 0, 0, 0.8);
+    color: var(--clr-text-light);
+    background-color: var(--clr-primary-about-card);
+    transition: 0.3s ease-in-out;
+}
+
+
+/* ============================================= */
+/* PROJECTS (SWIPER) BÖLÜMÜ           */
+/* ============================================= */
+.projects {
+    padding: 60px 0;
+    background-color: var(--clr-bg-page);
+    transition: background-color 0.3s ease;
+    border-bottom: 2px solid var(--clr-primary-hero);
+}
+
+.swiper {
+  width: 80%;
+  height: auto;
+}
+
+.swiper-wrapper{
+    margin-bottom: 2em;
+}
+
+.projects h2{
+    color: var(--clr-text-dark);
+    text-align: center;
+    padding: 2em 0;
+}
+
+.projects .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-primary-hero);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--card-shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto;
+}
+
+.projects .swiper-slide:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--card-shadow-color);
+}
+
+.projects .swiper-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.projects .swiper-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.projects .swiper-slide:hover .swiper-img img {
+    transform: scale(1.05);
+}
+
+.projects .swiper-text {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.projects .swiper-text h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--clr-text-light);
+}
+
+.projects .swiper-button-next,
+.projects .swiper-button-prev {
+    color: var(--clr-text-light);
+    border-radius: 50%;
+    background-color: var(--clr-primary-about-card);
+}
+
+.projects .swiper-button-next:hover{
+    transform: translateX(5px);
+    transition: 0.3s ease-in-out;
+}
+
+.projects .swiper-button-prev:hover{
+    transform: translateX(-5px);
+    transition: 0.3s ease-in-out;
+}
+
+.projects .swiper-pagination-bullet-active {
+    background-color: var(--clr-text-dark);
 }
