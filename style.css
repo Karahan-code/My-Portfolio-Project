@@ -49,6 +49,9 @@ body {
     justify-content: space-evenly;
     align-items: center;
     border-bottom: 2px solid var(--clr-text-light);
+    position: sticky;
+    top: 0;
+    z-index: 50;
 }
 
 /*NAVBAR BTNS*/
@@ -332,4 +335,149 @@ body {
 
 .detail a:hover{
     text-decoration: underline;
+}
+
+
+/*Career Section*/
+.career{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.career .path{
+    text-align: start;
+    padding: 1em;
+    border-left: 2px solid var(--clr-text-dark);
+    border-radius: 20px;
+}
+
+/*Message Section*/
+.message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message input{
+    background-color: transparent;
+    padding: .5em 1em;
+    margin: 1em;
+    width: 80%;
+    min-width: fit-content;
+}
+
+.message button{
+    background-color: var(--clr-bg-page);
+    padding: 1em;
+    margin: 1em;
+    border-radius: 20px;
+}
+
+.message button:hover{
+    background-color: var(--clr-primary-about-card);
+    color: var(--clr-bg-page);
+    transition: 0.3s ease-in-out;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: var(--clr-text-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ============================================= */
+/* RESPONSIVE TASARIM (MEDIA QUERIES)            */
+/* ============================================= */
+
+@media (max-width: 880px) {
+
+    /* --- Ana (Hero) Bölümü --- */
+    .main .hello {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5em;
+        padding: 2em 1em;
+    }
+
+    /* --- Hakkımda Bölümü --- */
+    .about-me {
+        margin-inline: 2em;
+        gap: 2em;
+        padding: 3em 1em;
+    }
+
+    .about-me h2 {
+        font-size: 1.8rem;
+    }
+
+    .swiper {
+        width: 90%;
+    }
+
+    .projects h2 {
+        font-size: 1.8rem;
+    }
+
+    /* --- Details (Grid) Bölümü --- */
+    .details {
+        margin: 2em;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'box-1'
+            'box-2'
+            'box-3'
+            'box-5'
+            'box-4';
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        padding: 1em 0;
+        gap: 1em;
+    }
+
+    .nav-btns {
+        gap: 1.5em;
+    }
+
+    /* --- Hakkımda Bölümü --- */
+    .about-me {
+        margin-inline: 1em;
+    }
+
+    .about-me h2 {
+        font-size: 1.5rem;
+    }
+
+    /* --- Details (Grid) Bölümü --- */
+    .details {
+        grid-template-columns: 300px;
+        margin: 1em;
+    }
+
+    .box h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-btn a i {
+        font-size: 1.2rem;
+        padding: 0.4em;
+    }
+
+    .message input {
+        width: 90%;
+    }
 }
